@@ -1,8 +1,8 @@
 static int speedup = []() {
-	std::ios::sync_with_stdio(false);
-	std::cin.tie(nullptr);
-	std::cout.tie(nullptr);
-	return 0;
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+    return 0;
 }();
 
 class LRUCache {
@@ -12,7 +12,8 @@ public:
     }
     
     int get(int key) {
-        std::unordered_map<int,std::list<pair<int, int>>::iterator>::iterator pair = keyToNode.find(key);
+        /* std::unordered_map<int, std::list<pair<int, int>>::iterator>::iterator */
+        auto pair = keyToNode.find(key);
         if (pair == keyToNode.end()) {
             return -1;    
         }
